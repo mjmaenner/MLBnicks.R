@@ -30,7 +30,7 @@ ggplot(nicks.majors.table.fifteen, aes(x=reorder(Var1, Freq), weight=Freq, fill=
   scale_x_discrete(name="Nickname")+
   theme(axis.ticks.y=element_blank(), axis.text.y=element_blank(), axis.title.x=element_text(size=16), axis.title.y=element_text(size=16))+
     scale_y_continuous(name=paste("Frequency among",length(names.majors.nicks),
-                       "MLB players with established nicknames"),expand=c(0,0),
+                       "MLB players with established nicknames"),expand=c(0,10),
                        breaks=c(0,10,20,30,40,50,60,70,80,90,100,110,120,130,140,150))+
                        scale_fill_solarized(accent="green", guide=FALSE)+coord_flip()+
   geom_text(aes(label=Var1, y=Freq), hjust=1.1, color="white", size=6, face="bold")+
